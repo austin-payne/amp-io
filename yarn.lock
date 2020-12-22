@@ -5609,10 +5609,15 @@ fsevents@~2.1.2:
   version: 0.0.0-use.local
   resolution: "root@workspace:."
   dependencies:
+    "@types/react": 17.0.0
+    "@types/react-dom": 17.0.0
     "@yarnpkg/pnpify": 2.4.0
     husky: 4.3.6
+    next: 10.0.3
     prettier: 2.2.1
     prettier-plugin-packagejson: 2.2.8
+    react: 17.0.1
+    react-dom: 17.0.1
     typescript: 4.0
   languageName: unknown
   linkType: soft
