@@ -25,4 +25,4 @@ jobs:
       run: |
        git merge --squash temp
        git commit -m 'Release ${{ github.event.release.tag_name }}'
-       git push prod
+       git push origin prod
