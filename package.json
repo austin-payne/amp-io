@@ -1,22 +1,26 @@
 {
-  "name": "with-typescript",
-  "version": "1.0.0",
-  "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
-    "type-check": "tsc"
-  },
-  "dependencies": {
-    "next": "latest",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
-  },
-  "devDependencies": {
-    "@types/node": "^12.12.21",
-    "@types/react": "^16.9.16",
-    "@types/react-dom": "^16.9.4",
-    "typescript": "4.0"
-  },
-  "license": "MIT"
+    "name": "amp-io",
+    "version": "1.0.0",
+    "private": true,
+    "license": "UNLICENSED",
+    "workspaces": [
+        "packages/*"
+    ],
+    "scripts": {
+        "prettify": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css,less}\" --ignore-path .gitignore"
+    },
+    "dependencies": {
+        "next": "10.0.3",
+        "react": "16.12.0",
+        "react-dom": "16.12.0"
+    },
+    "devDependencies": {
+        "@types/node": "12.12.21",
+        "@types/react": "16.9.16",
+        "@types/react-dom": "16.9.4",
+        "husky": "4.3.6",
+        "prettier": "2.2.1",
+        "prettier-plugin-packagejson": "2.2.8",
+        "typescript": "4.0"
+    }
 }

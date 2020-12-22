@@ -1,0 +1,17 @@
+{
+    "name": "@amp-io/app",
+    "version": "1.0.0",
+    "private": true,
+    "license": "UNLICENSED",
+    "scripts": {
+        "build": "next build",
+        "dev": "next",
+        "start": "next start",
+        "typecheck": "tsc"
+    },
+    "devDependencies": {},
+    "peerDependencies": {
+        "next": "*",
+        "react": "*"
+    }
+}
