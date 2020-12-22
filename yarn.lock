@@ -10,6 +10,7 @@ __metadata:
   resolution: "@amp-io/app@workspace:packages/app"
   dependencies:
     "@amp-io/core-ui": "*"
+    "@types/node": 12.19.9
     "@types/react": 17.0.0
     "@types/react-dom": 17.0.0
     "@yarnpkg/pnpify": 2.4.0
@@ -340,6 +341,13 @@ __metadata:
   version: 14.14.14
   resolution: "@types/node@npm:14.14.14"
   checksum: dea8d257d49d68c65dafa6ebde9453bb61b67febc92ed8d7e38fce8b95f18d32ccffb3ab37021f9be8d1e5c65cd59cdb7dd8981d9b89b2be103b3012aee09fcf
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:12.19.9":
+  version: 12.19.9
+  resolution: "@types/node@npm:12.19.9"
+  checksum: c1a9b8c3ae53bff0a0c312b6f1e50ee139619eb32887829e4405131cc77e92c2c25e9fec82212a4c03c4eb0b50dde0537db44ae6dd4fa46cb11c824965832d3d
   languageName: node
   linkType: hard
 

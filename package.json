@@ -7,6 +7,9 @@
         "packages/*"
     ],
     "scripts": {
+        "build:vercel": "scripts/build.sh",
+        "start:dev": "yarn workspace @amp-io/app dev",
+        "start:prod": "yarn workspace @amp-io/app start",
         "doctor": "yarn dlx @yarnpkg/doctor",
         "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css,less}\" --ignore-path .gitignore",
         "typecheck": "yarn workspaces foreach -ptv --exclude root run typecheck"
