@@ -13,7 +13,7 @@ jobs:
       uses: actions/checkout@v2
     - name: Checkout branches
       run: |
-       git checkout $GITHUB_SHA -b temp
+       git checkout ${{ github.sha }} -b temp
        git checkout prod
     - name: Initialize git config
       run: |
@@ -22,5 +22,5 @@ jobs:
     - name: Create merge commit
       run: |
        git merge --squash temp
-       git commit -m 'Merge release ${{ github.event.release.name }}'
+       git commit -m 'Merge release ${{ github.event.release.tag_name }}'
        git push origin prod
