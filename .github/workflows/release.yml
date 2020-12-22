@@ -11,10 +11,11 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-    - name: Checkout branches
+      with:
+        fetch-depth: 0
+    - name: Checkout relevant branches
       run: |
-       git fetch
-       git checkout ${{ github.sha }} -b temp
+       git checkout -b temp
        git checkout prod
     - name: Initialize git config
       run: |
