@@ -1,5 +1,5 @@
 {
-    "name": "amp-io",
+    "name": "root",
     "version": "1.0.0",
     "private": true,
     "license": "UNLICENSED",
@@ -7,17 +7,12 @@
         "packages/*"
     ],
     "scripts": {
-        "prettify": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css,less}\" --ignore-path .gitignore"
-    },
-    "dependencies": {
-        "next": "10.0.3",
-        "react": "16.12.0",
-        "react-dom": "16.12.0"
+        "doctor": "yarn dlx @yarnpkg/doctor",
+        "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css,less}\" --ignore-path .gitignore",
+        "typecheck": "yarn workspaces foreach -ptv --exclude root run typecheck"
     },
     "devDependencies": {
-        "@types/node": "12.12.21",
-        "@types/react": "16.9.16",
-        "@types/react-dom": "16.9.4",
+        "@yarnpkg/pnpify": "2.4.0",
         "husky": "4.3.6",
         "prettier": "2.2.1",
         "prettier-plugin-packagejson": "2.2.8",

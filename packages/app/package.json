@@ -7,11 +7,18 @@
         "build": "next build",
         "dev": "next",
         "start": "next start",
-        "typecheck": "tsc"
+        "typecheck": "tsc && echo typecheck success"
     },
-    "devDependencies": {},
-    "peerDependencies": {
-        "next": "*",
-        "react": "*"
+    "dependencies": {
+        "@amp-io/core-ui": "*",
+        "next": "10.0.3",
+        "react": "17.0.1",
+        "react-dom": "17.0.1"
+    },
+    "devDependencies": {
+        "@types/react": "17.0.0",
+        "@types/react-dom": "17.0.0",
+        "@yarnpkg/pnpify": "2.4.0",
+        "typescript": "4.0"
     }
 }
