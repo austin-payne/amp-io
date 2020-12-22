@@ -1,0 +1,26 @@
+name: Create Prod Release
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Checkout branches
+      run: |
+       git checkout ${{ github.event.release.target_commitish }} -b temp
+       git checkout prod
+    - name: Initialize git config
+      run: |
+       git config user.name "GitHub Actions"
+       git config user.email noreply@github.com
+    - name: Create merge commit
+      run: |
+       git merge --squash temp
+       git commit -m 'Merge release ${{ github.event.release.name }}'
+       git push origin prod
