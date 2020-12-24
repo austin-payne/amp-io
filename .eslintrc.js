@@ -10,11 +10,9 @@ module.exports = {
         'airbnb/hooks',
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
+        'plugin:import/typescript',
         'plugin:prettier/recommended',
         'prettier/react',
-        'plugin:import/errors',
-        'plugin:import/warnings',
-        'plugin:import/typescript',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -30,6 +28,8 @@ module.exports = {
     rules: {
         '@typescript-eslint/explicit-module-boundary-types': 'off',
         '@typescript-eslint/no-empty-interface': 'off',
+        'import/extensions': 'off',
+        'import/prefer-default-export': 'off',
         'jsx-a11y/anchor-is-valid': [
             'error',
             {
@@ -43,5 +43,6 @@ module.exports = {
             { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
         ],
         'react/react-in-jsx-scope': 'off',
+        'react/require-default-props': 'off',
     },
 };
