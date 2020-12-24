@@ -28,6 +28,7 @@ module.exports = {
     rules: {
         '@typescript-eslint/explicit-module-boundary-types': 'off',
         '@typescript-eslint/no-empty-interface': 'off',
+        '@typescript-eslint/require-await': 'off',
         'import/extensions': 'off',
         'import/prefer-default-export': 'off',
         'jsx-a11y/anchor-is-valid': [

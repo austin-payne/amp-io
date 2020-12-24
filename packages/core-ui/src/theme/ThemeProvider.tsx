@@ -5,6 +5,7 @@ import {
 } from '@material-ui/core';
 import { memo } from 'react';
 import { defaultTheme } from './theme';
+import { useRemoveServerStyles } from './useRemoveServerStyles';
 
 export interface ThemeProviderProps {
     children: React.ReactNode;
@@ -12,10 +13,14 @@ export interface ThemeProviderProps {
 }
 
 export const ThemeProvider = memo(
-    ({ children, theme = defaultTheme }: ThemeProviderProps) => (
-        <MuiThemeProvider theme={theme}>
-            <CssBaseline />
-            {children}
-        </MuiThemeProvider>
-    )
+    ({ children, theme = defaultTheme }: ThemeProviderProps) => {
+        useRemoveServerStyles();
+
+        return (
+            <MuiThemeProvider theme={theme}>
+                <CssBaseline />
+                {children}
+            </MuiThemeProvider>
+        );
+    }
 );
