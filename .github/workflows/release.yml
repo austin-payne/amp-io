@@ -23,6 +23,5 @@ jobs:
        git config user.email noreply@github.com
     - name: Create merge commit
       run: |
-       git merge --squash main
-       git commit -m 'Release ${{ github.event.release.tag_name }}'
+       git merge main
        git push origin prod
