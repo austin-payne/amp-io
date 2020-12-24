@@ -1,0 +1,35 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+	    "search.exclude": {
+		    "**/.yarn": true,
+		    "**/.pnp.*": true
+	    },
+	    "typescript.tsdk": ".yarn/sdks/typescript/lib",
+		"typescript.tsserver.watchOptions": {
+			"watchFile": "useFsEventsOnParentDirectory",
+			"watchDirectory": "useFsEvents"
+		},
+		"typescript.enablePromptUseWorkspaceTsdk": true,
+		"typescript.tsserver.maxTsServerMemory": 8192,
+		"eslint.nodePath": ".yarn/sdks",
+		"eslint.packageManager": "yarn",
+		"eslint.validate": [
+			"javascript",
+			"typescript",
+			"typescriptreact"
+		],
+		"prettier.prettierPath": ".yarn/sdks/prettier/index.js",
+	},
+	"extensions": {
+		"recommendations": [
+			"dbaeumer.vscode-eslint",
+			"esbenp.prettier-vscode",
+			"arcanis.vscode-zipfs",
+		]
+	}
+}

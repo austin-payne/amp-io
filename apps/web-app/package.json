@@ -12,6 +12,7 @@
     },
     "dependencies": {
         "@amp-io/core-ui": "1.0.0",
+        "@yarnpkg/pnpify": "2.4.0",
         "next": "10.0.3",
         "react": "17.0.1",
         "react-dom": "17.0.1"
@@ -20,7 +21,6 @@
         "@types/node": "12.19.9",
         "@types/react": "17.0.0",
         "@types/react-dom": "17.0.0",
-        "@yarnpkg/pnpify": "2.4.0",
         "typescript": "4.0"
     }
 }
