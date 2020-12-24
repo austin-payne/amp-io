@@ -16,7 +16,7 @@ export const defaultTheme = createMuiTheme({
         secondary: {
             light: colors.amber.A100,
             main: colors.amber.A200,
-            dark: colors.amber.A700,
+            dark: colors.amber.A400,
         },
     },
 });
