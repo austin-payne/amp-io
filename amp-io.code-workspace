@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+	    "search.exclude": {
+		    "**/.yarn": true,
+		    "**/.pnp.*": true
+	    },
+		"eslint.packageManager": "yarn",
+		"eslint.validate": [
+			"javascript",
+			"typescript",
+			"typescriptreact"
+		],
+	},
+	"extensions": {
+		"recommendations": [
+			"arcanis.vscode-zipfs",
+			"dbaeumer.vscode-eslint",
+			"esbenp.prettier-vscode",
+		]
+	}
+}
