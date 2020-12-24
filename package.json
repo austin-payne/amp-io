@@ -4,26 +4,28 @@
     "private": true,
     "license": "UNLICENSED",
     "workspaces": [
+        "apps/*",
         "packages/*"
     ],
     "scripts": {
-        "build:vercel": "scripts/build.sh",
-        "start:dev": "yarn workspace @amp-io/app dev",
-        "start:prod": "yarn workspace @amp-io/app start",
         "doctor": "yarn dlx @yarnpkg/doctor",
         "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css,less}\" --ignore-path .gitignore",
         "typecheck": "yarn workspaces foreach -ptv --exclude root run typecheck"
     },
     "dependencies": {
+        "@emotion/react": "11.1.4",
+        "@emotion/styled": "11.0.0",
+        "@material-ui/core": "next",
+        "next": "10.0.3",
         "react": "17.0.1",
         "react-dom": "17.0.1"
     },
     "devDependencies": {
+        "@types/node": "12.19.9",
         "@types/react": "17.0.0",
         "@types/react-dom": "17.0.0",
         "@yarnpkg/pnpify": "2.4.0",
         "husky": "4.3.6",
-        "next": "10.0.3",
         "prettier": "2.2.1",
         "prettier-plugin-packagejson": "2.2.8",
         "typescript": "4.0"
