@@ -12,6 +12,7 @@ __metadata:
     "@emotion/react": 11.1.4
     "@emotion/styled": 11.0.0
     "@material-ui/core": next
+    "@material-ui/icons": next
     "@types/clean-css": 4.2.3
     "@types/postcss-flexbugs-fixes": 4.2.0
     "@types/postcss-preset-env": 6.7.0
@@ -518,6 +519,23 @@ __metadata:
     "@types/react":
       optional: true
   checksum: 38fed1fd63b5865ad559ddeb49c0c07e9ab81ef070cb77dbec7afcd503557766e9a83fa31664bf9e9e35dedfa7b16ba33451fd1dad584a17b877f9adae4b18db
+  languageName: node
+  linkType: hard
+
+"@material-ui/icons@npm:next":
+  version: 5.0.0-alpha.20
+  resolution: "@material-ui/icons@npm:5.0.0-alpha.20"
+  dependencies:
+    "@babel/runtime": ^7.4.4
+  peerDependencies:
+    "@material-ui/core": ^5.0.0-alpha.15
+    "@types/react": ^16.8.6 || ^17.0.0
+    react: ^16.8.0 || ^17.0.0
+    react-dom: ^16.8.0 || ^17.0.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: f0e03c05f405786ed66046b217f36d489c545de3a0194e7423aae2ca3bfae8e15cec9bc534cec5cecc7431d6a1335ab91f1798aac4a3f83c20c7819e1dc92c4a
   languageName: node
   linkType: hard
 
