@@ -1,15 +1,17 @@
-import { Button } from '@amp-io/core-ui';
-import Link from 'next/link';
+import { Button, Link } from '@amp-io/core-ui';
 
 const IndexPage = () => (
     <>
         <h1>Hello v2</h1>
         <p>
-            <Link href="/about" passHref>
-                <Button variant="contained" color="primary">
-                    About
-                </Button>
-            </Link>
+            <Button
+                component={Link}
+                variant="contained"
+                color="primary"
+                href="/about"
+            >
+                About
+            </Button>
         </p>
     </>
 );
