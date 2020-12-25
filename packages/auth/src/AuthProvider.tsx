@@ -29,10 +29,10 @@ export type AuthProviderProps = {
 
 export const AuthProvider = memo(
     ({ children, userRoute }: AuthProviderProps) => {
-        const { loading, error, value: user } = useAsync(
-            async () => await fetchUser(userRoute),
-            [userRoute]
-        );
+        const { loading, error, value: user } = useAsync(async () => {
+            console.log('called useAsync');
+            return await fetchUser(userRoute);
+        }, [userRoute]);
 
         console.log(
             `loading: ${loading ? 'true' : 'false'}, error: ${JSON.stringify(
