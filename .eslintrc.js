@@ -29,6 +29,7 @@ module.exports = {
         '@typescript-eslint/explicit-module-boundary-types': 'off',
         '@typescript-eslint/no-empty-interface': 'off',
         '@typescript-eslint/require-await': 'off',
+        'consistent-return': 'off',
         'import/extensions': 'off',
         'import/prefer-default-export': 'off',
         'jsx-a11y/anchor-is-valid': [
@@ -39,6 +40,8 @@ module.exports = {
                 aspects: ['invalidHref', 'preferButton'],
             },
         ],
+        'no-return-await': 'off',
+        'no-underscore-dangle': 'off',
         'react/jsx-filename-extension': [
             2,
             { extensions: ['.js', '.jsx', '.ts', '.tsx'] },

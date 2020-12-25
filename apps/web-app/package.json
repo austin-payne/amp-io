@@ -11,6 +11,7 @@
         "typecheck:app": "yarn workspaces foreach -ptvR run typecheck"
     },
     "dependencies": {
+        "@amp-io/auth": "1.0.0",
         "@amp-io/core-ui": "1.0.0",
         "next": "10.0.3",
         "react": "17.0.1",
