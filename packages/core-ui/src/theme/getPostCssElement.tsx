@@ -10,32 +10,14 @@ const createGetPostCssElement = () => {
     /* eslint-disable @typescript-eslint/no-unsafe-call */
     /* eslint-disable @typescript-eslint/no-unsafe-member-access */
     /* eslint-disable @typescript-eslint/no-var-requires */
-    const postcss = require('postcss');
-    const flexbugs = require('postcss-flexbugs-fixes');
-    const presetEnv = require('postcss-preset-env');
     const CleanCSS = require('clean-css');
 
-    const processor = postcss([
-        flexbugs() as Plugin,
-        presetEnv({
-            autoprefixer: {
-                flexbox: 'no-2009',
-            },
-            stage: 3,
-            features: {
-                'custom-properties': false,
-            },
-        }) as Plugin,
-    ]);
     const cleanCSS = new CleanCSS();
 
     return async (sheets: ServerStyleSheets) => {
         const css = sheets.toString();
         if (css) {
-            const processed = await processor.process(css, {
-                from: undefined,
-            });
-            const cleaned = cleanCSS.minify(processed.css).styles;
+            const cleaned = cleanCSS.minify(css).styles;
 
             return (
                 <style

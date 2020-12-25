@@ -1,15 +1,10 @@
 const path = require('path');
+
 module.exports = {
     webpack: function (config, { defaultLoaders, isServer, webpack }) {
         const resolvedBaseUrl = path.resolve(config.context, '../../');
         config.module.rules = [
             ...config.module.rules,
-            // Fix requiring mjs files
-            {
-                test: /\.mjs$/,
-                include: /node_modules/,
-                type: 'javascript/auto',
-            },
             // Fix paths to yarn workspaces
             {
                 test: /\.(tsx|ts|js|mjs|jsx)$/,
@@ -27,9 +22,6 @@ module.exports = {
                 fs: 'empty',
             };
         }
-
-        // Fix postcss internal require warnings
-        config.plugins.push(new webpack.ContextReplacementPlugin(/postcss.*/));
 
         return config;
     },
