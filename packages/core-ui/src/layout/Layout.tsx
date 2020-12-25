@@ -9,6 +9,8 @@ export interface LayoutProps {
 }
 
 export const Layout = memo(({ page }: LayoutProps) => {
+    useStyles();
+
     return (
         <>
             <Header />
