@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { auth0 } from './auth0';
+import { auth0 } from '../auth0';
 
 export const profile = async (req: NextApiRequest, res: NextApiResponse) => {
     try {

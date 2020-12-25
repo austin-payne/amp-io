@@ -1,7 +1,7 @@
 import { createContext, useContext, useMemo, memo } from 'react';
 import { useAsync } from 'react-use';
-import { fetchUser } from './fetchUser';
-import { User } from './user';
+import { fetchUser } from '../fetchUser';
+import { User } from '../user';
 
 type AuthContextLoading = {
     ready: false;

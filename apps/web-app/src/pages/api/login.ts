@@ -1,3 +1,3 @@
-import { login } from '@amp-io/auth';
+import { login } from '@amp-io/auth/src/server';
 
 export default login;

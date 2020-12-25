@@ -1,3 +1,3 @@
-import { profile } from '@amp-io/auth';
+import { profile } from '@amp-io/auth/src/server';
 
 export default profile;

@@ -1,5 +1,4 @@
 import { GetServerSideProps } from 'next';
-import { getSession } from '@amp-io/auth';
 
 type PrivatePageProps = {
     user: unknown;
@@ -17,6 +16,7 @@ const PrivatePage = ({ user }: PrivatePageProps) => {
 export const getServerSideProps: GetServerSideProps<PrivatePageProps> = async (
     ctx
 ) => {
+    const { getSession } = await import('@amp-io/auth/src/server');
     const session = await getSession(ctx);
 
     if (!session) {
