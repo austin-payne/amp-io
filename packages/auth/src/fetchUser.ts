@@ -16,6 +16,7 @@ export const fetchUser = async (
     );
 
     if (!res.ok) {
+        console.log(await res.json());
         return;
     }
 
