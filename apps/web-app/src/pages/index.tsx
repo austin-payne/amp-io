@@ -9,6 +9,7 @@ const IndexPage = () => (
                 variant="contained"
                 color="primary"
                 href="/about"
+                naked
             >
                 About
             </Button>

@@ -10,6 +10,7 @@ const AboutPage = () => (
                 variant="contained"
                 color="primary"
                 href="/"
+                naked
             >
                 Go home
             </Button>

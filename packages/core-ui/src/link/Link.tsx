@@ -40,6 +40,7 @@ const NextLinkComposed = forwardRef<HTMLAnchorElement, NextLinkComposedProps>(
 type LinkPropsBase = {
     activeClassName?: string;
     ref?: React.Ref<HTMLAnchorElement>;
+    naked?: boolean;
 };
 
 type LinkProps = LinkPropsBase &
@@ -52,6 +53,7 @@ export const Link = memo(
             href,
             activeClassName = 'active',
             className: classNameProps,
+            naked,
             ...other
         } = props;
 
@@ -60,6 +62,17 @@ export const Link = memo(
         const className = clsx(classNameProps, {
             [activeClassName]: router.pathname === pathname && activeClassName,
         });
+
+        if (naked) {
+            return (
+                <NextLinkComposed
+                    className={className}
+                    ref={ref}
+                    href={href}
+                    {...other}
+                />
+            );
+        }
 
         return (
             <MuiLink

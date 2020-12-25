@@ -19,4 +19,5 @@ export const defaultTheme = createMuiTheme({
             dark: colors.amber.A400,
         },
     },
+    typography: {},
 });
