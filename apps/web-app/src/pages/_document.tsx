@@ -27,9 +27,15 @@ class Document extends BaseDocument {
 
     render() {
         return (
-            <Html lang="en" style={{ height: '100vh' }}>
+            <Html lang="en" style={{ height: '100%' }}>
                 <Head />
-                <body style={{ height: '100%' }}>
+                <body
+                    style={{
+                        minHeight: '100%',
+                        display: 'flex',
+                        flexDirection: 'column',
+                    }}
+                >
                     <Main />
                     <NextScript />
                 </body>
